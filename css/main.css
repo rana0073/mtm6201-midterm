@@ -180,26 +180,16 @@ nav a {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2 columns with equal width */
     grid-template-rows: repeat(2, 1fr);
-    /* 2 rows with equal height */
     gap: 20px;
-    /* Gap between images */
     width: 100%;
-    /* Fixed width for the matrix */
 }
 
-/* Image Styles */
 .welcome_smallImages img {
     width: 100%;
-    /* Fill the grid cell */
     height: 100%;
-    /* Fill the grid cell */
     object-fit: cover;
-    /* Maintain aspect ratio and cover the cell */
-    /* Optional: rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Optional: shadow effect */
 }
 
 .about {
@@ -420,11 +410,25 @@ footer {
 }
 
 /* Button Hover and Focus States */
-button:hover,
-button:focus {
-    background-color: #d69e3d;
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
+button.menu_btn:hover, button.our_menu_btn:hover,  button.learnMore_btn:hover,
+button.menu_btn:focus, button.our_menu_btn:focus, a:focus, button.learnMore_btn:focus {
+    background-color:#d69e3d; /* Example hover/focus color */
+    color: #ffffff;
+    transform: scale(1.05);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+a:hover, a:focus {
+    color: #d69e3d;
+    transform: scale(1.05);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button.locations_btn:hover, button.locations_btn:focus{
+    background-color:#fff; 
+    color: #000;
+    transform: scale(1.05);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 /* Example Animation */
